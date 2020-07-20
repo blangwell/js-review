@@ -35,10 +35,13 @@ const games = {
         favoriteFour: 'Katamari Forever'
     },
     printFavoriteGame: function() {
-        console.log(this.favoriteOne);
-    }
+        console.log(this.favoriteGames.favoriteOne);
+    }   
 
 };
+
+console.log(games.favoriteGames);
+
 
 
 
@@ -57,4 +60,38 @@ console.log(tesla.vehicles.vehicleThree);
 // use bracket notation
 console.log(tesla['vehicles']['vehicleThree']);
 
-tesla.print();
+games.printFavoriteGame();
+
+function printFriends(array) {
+    array.forEach(friend => {
+        console.log(friend);
+    })
+
+    array.forEach(function(friend) {
+        console.log(friend)
+    })
+};
+
+friends.forEach(function(friend) {
+    printFriends(friend);
+});
+
+printFriends(games.firstGames);
+
+
+
+// standard function
+function addNumbers(num1, num2) {
+    return num1 + num2;
+};
+
+// function expression
+const multiplyNumbers = function(num1, num2) {
+    return num1 * num2;
+};
+
+
+// arrow function 
+const subtractNumbers = (num1, num2) => {
+    return num1 - num2;
+}

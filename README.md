@@ -27,3 +27,22 @@ const games = {
 };
 ```
 
+## Examples of Functions
+```javascript
+
+// standard function
+function addNumbers(num1, num2) {
+    return num1 + num2;
+};
+
+// function expression
+const multiplyNumbers = function(num1, num2) {
+    return num1 * num2;
+};
+
+
+// arrow function 
+const subtractNumbers = (num1, num2) => {
+    return num1 - num2;
+};
+```
