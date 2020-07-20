@@ -62,24 +62,20 @@ console.log(tesla['vehicles']['vehicleThree']);
 
 games.printFavoriteGame();
 
+
 function printFriends(array) {
     array.forEach(friend => {
         console.log(friend);
     })
 
-    array.forEach(function(friend) {
-        console.log(friend)
-    })
+    // logic can also be written this way =>
+    // array.forEach(function(friend) {
+    //     console.log(friend)
+    // })
 };
 
-friends.forEach(function(friend) {
-    printFriends(friend);
-});
 
-printFriends(games.firstGames);
-
-
-
+// FUNCTION TYPES
 // standard function
 function addNumbers(num1, num2) {
     return num1 + num2;
@@ -90,8 +86,29 @@ const multiplyNumbers = function(num1, num2) {
     return num1 * num2;
 };
 
-
 // arrow function 
 const subtractNumbers = (num1, num2) => {
     return num1 - num2;
-}
+};
+
+
+// DOM 
+// select an element
+const container = document.querySelector('.container');
+console.log(container);
+
+// create an element
+const headerTwo = document.createElement('h2');
+headerTwo.textContent = 'My First JS Review'; 
+console.log(headerTwo);
+
+// append child element to .container
+container.appendChild(headerTwo);
+
+// add a class to headerTwo
+headerTwo.classList.add('subtitle', 'header-two');
+console.log(headerTwo.classList);
+// or 
+// headerTwo.setAttribute('class', 'header-two');
+headerTwo.classList.remove('header-two');
+console.log(headerTwo);
