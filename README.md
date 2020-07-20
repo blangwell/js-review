@@ -68,3 +68,27 @@ headerTwo.setAttribute('class', 'header-two');
 // remove a class
 headerTwo.classList.remove('header-two');
 ```
+
+## More DOM Manipulation
+Iterate through array, create new element, add text to that element, append item to list, listen for a click to append list to document.
+```javascript
+// iterate through my friends array
+for (let i = 0; i < friends.length; i++) {
+    // reference each friend
+    let eachFriend = friends[i];
+    console.log(eachFriend);
+
+    // create a li (list item)
+    const listItem = document.createElement('li');
+    
+    listItem.textContent = eachFriend;
+    // add textContent to that li
+    list.appendChild(listItem);
+    
+}
+
+// append that to a ul (unordered list)
+headerThree.addEventListener('click', function() {
+    container.appendChild(list);
+})
+```

@@ -95,20 +95,59 @@ const subtractNumbers = (num1, num2) => {
 // DOM 
 // select an element
 const container = document.querySelector('.container');
-console.log(container);
 
 // create an element
 const headerTwo = document.createElement('h2');
 headerTwo.textContent = 'My First JS Review'; 
-console.log(headerTwo);
 
 // append child element to .container
 container.appendChild(headerTwo);
 
 // add a class to headerTwo
 headerTwo.classList.add('subtitle', 'header-two');
-console.log(headerTwo.classList);
 // or 
 // headerTwo.setAttribute('class', 'header-two');
 headerTwo.classList.remove('header-two');
-console.log(headerTwo);
+
+
+
+// EVENT LISTENERS
+// change text content of element when clicked
+headerTwo.addEventListener('click', function() {
+    headerTwo.textContent = 'Barent';
+});
+
+// make another element
+const headerThree = document.createElement('h2');
+headerThree.textContent = 'Friends';
+
+container.appendChild(headerThree);
+console.log(headerThree);
+
+
+const list = document.createElement('ul');
+
+
+// iterate through my friends array
+for (let i = 0; i < friends.length; i++) {
+    // reference each friend
+    let eachFriend = friends[i];
+    console.log(eachFriend);
+
+    // create a li (list item)
+    const listItem = document.createElement('li');
+    
+    listItem.textContent = eachFriend;
+    // add textContent to that li
+    list.appendChild(listItem);
+    
+}
+
+// append that to a ul (unordered list)
+headerThree.addEventListener('click', function() {
+    container.appendChild(list);
+})
+
+
+
+
