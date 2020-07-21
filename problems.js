@@ -181,6 +181,9 @@ function arraySubstring(words, str) {
 
 console.log(arraySubstring(stringArray, 'pants'));
 
+
+// evenCaps
+
 // Write a function evenCaps(sentence) that takes in a sentence as an
 // argument and returns the same string with each even index being
 // capitalized. Index 0 counts as even.
@@ -192,3 +195,21 @@ console.log(arraySubstring(stringArray, 'pants'));
 // loop through each character in string
 // if string index % 2 === 0 run toUppercase on index
 // append character to result string
+
+function evenCaps(sentence) {
+    let capsString = '';
+    for (let i = 0; i < sentence.length; i++) {
+        if (i % 2 === 0) {
+            // convert string toUpperCase
+            // append capitalized character to capsString
+            capsString += sentence[i].toUpperCase(); 
+        
+        } else {
+            capsString += sentence[i];
+        }
+
+    }
+    return capsString;
+};
+
+console.log(evenCaps('the quick brown fox jumps'));
