@@ -149,7 +149,7 @@ function wordYeller(sentence) {
     return yelledSentence;
 };
 
-console.log(wordYeller('here is a; practice'));
+console.log(wordYeller('the quick brown fox'));
 
 
 // arraySubstring
@@ -195,6 +195,9 @@ console.log(arraySubstring(stringArray, 'pants'));
 // loop through each character in string
 // if string index % 2 === 0 run toUppercase on index
 // append character to result string
+
+// side note, this will be a great piece of logic to use
+// when someone on the internet says something stupid
 
 function evenCaps(sentence) {
     let capsString = '';
