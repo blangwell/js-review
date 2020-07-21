@@ -1,6 +1,13 @@
 # JavaScript Review
 This is my review of JavaScript with a dash of HTML and CSS.
 
+[Data Types](##examples-of-data-types)\
+[Functions](##examples-of-functions)\
+[DOM part 1](##dom-manipulation)\
+[DOM part 2](##more-dom-manipulation)\
+[HTML](##html)\
+[CSS](##css)\
+[Problem Solving Checklist](##problem-solving-checklist)
 
 ## Examples of Data Types
 ```javascript
@@ -141,7 +148,7 @@ h1, h3, p {
 }
 ```
 
-## Problem Solving Checklist
+## [Problem Solving Checklist]
 Remember that almost any problem can be broken down into smaller parts!
 
 - [ ] Do I understand what the prompt is asking?
