@@ -146,8 +146,72 @@ for (let i = 0; i < friends.length; i++) {
 // append that to a ul (unordered list)
 headerThree.addEventListener('click', function() {
     container.appendChild(list);
-})
+});
 
 
 
+// PROBLEM SOLVING
+
+// what do i start with?
+// what do i hope to end up with? 
+
+// identify the problem
+// understand what the problem is asking
+// must have the diagnosis before you work on a cure
+// break the problem down into smaller, more manageable problems
+
+// - [ ] Do I understand what the prompt is asking?
+// - [ ] Am I able to break the problem down?
+// - [ ] What is my strategy for solving the problem?
+// - [ ] Do I understand what my code is doing?
+// - [ ] Am I able to foresee any edge cases?
+// - [ ] Am I able to track the order of the code that is being executed?
+// - [ ] Am I able to track the values of the variables?
+// - [ ] Am I able to walk through my code line by line with an example?
+// - [ ] Do I have a working solution?
+
+
+// fizzBuzz
+// Write a function that does the following:
+    // takes in an array
+    // check each number in the array
+    // if the number is divisible by 5 and 3 === FizzBuzz
+    // if the number is divisible by 3 === Fizz
+    // if the number is divisible by 5 === Buzz
+
+// For example: 
+// [3, 5, 15, 20, 9, 7]
+// ['Fizz', 'Buzz', 'FizzBuzz', 'Buzz', 'Fizz', 7]
+
+// breakdown
+// set up empty array
+// make a function that takes an array
+// iterate through array
+// check remainder of each element
+// push the result of each elem inside the result array
+// return result array
+
+function fizzBuzz(array) {
+    let result = [];
+
+    for (let i = 0; i < array.length; i++) {
+        let num = array[i]; // intermediate variable
+        console.log(num); 
+        
+        if (num % 3 === 0 && num % 5 === 0) {
+            result.push('FizzBuzz');
+        } else if (num % 3 === 0) {
+            result.push('Fizz');
+        } else if (num % 5 === 0) {
+            result.push('Buzz');
+        } else {
+            result.push(num);
+        }
+    }
+
+    return result;
+};
+
+const numbers = [3, 5, 15, 20, 9, 7]
+console.log(fizzBuzz(numbers));
 
