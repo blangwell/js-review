@@ -148,7 +148,7 @@ h1, h3, p {
 }
 ```
 
-## [Problem Solving Checklist]
+## Problem Solving Checklist
 Remember that almost any problem can be broken down into smaller parts!
 
 - [ ] Do I understand what the prompt is asking?
