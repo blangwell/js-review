@@ -1,6 +1,7 @@
 # JavaScript Review
 This is my review of JavaScript with a dash of HTML and CSS.
 
+
 ## Examples of Data Types
 ```javascript
 let name = 'Barent'; // string
@@ -91,4 +92,16 @@ for (let i = 0; i < friends.length; i++) {
 headerThree.addEventListener('click', function() {
     container.appendChild(list);
 });
+```
+
+## HTML
+To generate HTML boilerplate code in VSCode, use the command `! tab/return`.
+The CSS should be linked in the document's head like so:
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>JS Review</title>
+</head>
 ```
