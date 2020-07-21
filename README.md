@@ -132,3 +132,24 @@ body {
     color: green;
 }
 ```
+
+Multiple selectors can be used on the same style:
+```css
+/* the following style will effect h1, h3, and p elements*/
+h1, h3, p {
+    color: blue;
+}
+```
+
+## Problem Solving Checklist
+Remember that almost any problem can be broken down into smaller parts!
+
+- [ ] Do I understand what the prompt is asking?
+- [ ] Am I able to break the problem down?
+- [ ] What is my strategy for solving the problem?
+- [ ] Do I understand what my code is doing?
+- [ ] Am I able to foresee any edge cases?
+- [ ] Am I able to track the order of the code that is being executed?
+- [ ] Am I able to track the values of the variables?
+- [ ] Am I able to walk through my code line by line with an example?
+- [ ] Do I have a working solution?
