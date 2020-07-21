@@ -95,7 +95,7 @@ headerThree.addEventListener('click', function() {
 ```
 
 ## HTML
-To generate HTML boilerplate code in VSCode, use the command `! tab/return`.
+To generate HTML boilerplate code in VSCode, use the command `! tab`.  \
 The CSS should be linked in the document's head like so:
 ```html
 <head>
@@ -104,4 +104,31 @@ The CSS should be linked in the document's head like so:
     <link rel="stylesheet" href="./style.css">
     <title>JS Review</title>
 </head>
+```
+
+The JavaScript src file should be linked at the bottom of the body like so:
+```html
+<body>
+    <h1>JS Review</h1>
+    <div class="container">
+
+    </div>
+    <script src="./problems.js"></script>
+</body>
+```
+
+## CSS
+Remember that the C in CSS stands for _Cascading_. The more specific selector wins out:
+```css
+body {
+    background-color: black;
+    font-family: Helvetica, sans-serif;
+    color: white;
+
+}
+
+/* .big words is more specific than body, therefor the font color will be green*/
+.big-words {
+    color: green;
+}
 ```
