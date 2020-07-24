@@ -3,6 +3,7 @@ This is my review of JavaScript with a dash of HTML and CSS.
 
 [Data Types](##examples-of-data-types)\
 [Functions](##examples-of-functions)\
+[For Loops](##for-loops)\
 [DOM part 1](##dom-manipulation)\
 [DOM part 2](##more-dom-manipulation)\
 [HTML](##html)\
@@ -54,6 +55,37 @@ const subtractNumbers = (num1, num2) => {
     return num1 - num2;
 };
 ```
+### Function Use Cases
+
+```js
+const arrayInside = [1, 4, 7, 9]
+
+// conditional logic within a function
+function isInside(array, element) { 
+    if (array.indexOf(element) !== -1) {
+        return true;
+    } else {
+        return false;
+}
+};
+console.log(isInside(arrayInside, 4));
+```
+
+## For Loops
+```js
+// decrementing for loop
+function reverseString(string) {
+    let text = '';
+
+    // decrementing for loops mostly use elem.length - 1
+    for (var i = string.length - 1; i >= 0; i--) { 
+        text += string[i];
+    } // decrementing for loop
+    return text.toLowerCase();
+};
+
+console.log(reverseString('any string youd like'));
+```
 
 ## DOM Manipulation 
 ```javascript
@@ -100,6 +132,63 @@ headerThree.addEventListener('click', function() {
     container.appendChild(list);
 });
 ```
+## Classes
+### \_\_proto\_\_
+```__proto__``` signals one object inheriting from another object.
+```js
+const game = {
+    title: 'Death Stranding',
+    releaseYear: 2019,
+    rating: 'M'
+};
+
+const gameTwo = {
+    title: 'Far Cry 5',
+    releaseYear: 2018
+};
+
+gameTwo.__proto__ = game; // this means that gameTwo will have a rating: 'M'
+```
+### constructor functions
+Here we are defining class attributes by way of a constructor function. Note the use of ```.this``` in the variable declaration and in the ```intro()``` function.
+```js
+class GithubProfile {
+    constructor(username, name, url) { // constructor function
+        this.username = username;
+        this.name = name;
+        this.url = url;
+    }
+    intro() {
+        console.log(`My name is ${this.name} and my username is @${this.username}`) // backtick wrapped string to include javscript
+    }
+}
+```
+
+## Fetch()
+```fetch()``` is a global method used to 'fetch' resources from a server asynchronously (a little bit like the requests module in Python!) Asynchronous operations means your code can keep running while waiting on a response from a server. 
+```js
+// this fetches data objects from my github
+fetch('https://api.github.com/users/blangwell')
+``` 
+## Promises
+```.then()``` is a method used to return a ```Promise```. By using ```fetch()``` followed by ```.then()``` we are essentially saying, "fetch me this data, _then_ when you get it, do _this_.
+#### fetch() and .then()
+```js
+fetch('https://api.github.com/users/blangwell') //pass in url as a string
+.then(response => {
+    return response.json();
+})
+.then(data => {
+    let githubUrl = data.url; 
+    let githubUserName = data.login;
+    let githubName = data.name;
+
+    // create an instance of the GithubProfile class
+    const barent = new GithubProfile(githubUserName, githubName, githubUrl);
+
+})
+```
+
 
 ## HTML
 To generate HTML boilerplate code in VSCode, use the command `! tab`.  \

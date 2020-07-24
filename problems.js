@@ -27,7 +27,9 @@ console.log(isInside(arrayInside, 4));
 
 function reverseString(string) {
     let text = '';
-    for (var i = string.length - 1; i >= 0; i--) {
+
+    // decrementing for loops mostly use elem.length - 1
+    for (var i = string.length - 1; i >= 0; i--) { 
         text += string[i];
     } // decrementing for loop
     return text.toLowerCase();
@@ -91,14 +93,14 @@ function everyOtherWord(sentence) {
         console.log(splitSentence[i]);
         
         // push 0 index and even indexes to result
-        if (i % 2 === 0){
-            result.push(splitSentence[i]);
+        if (i % 2 === 0){  // 2  / 0 always 0
+            result.push(splitSentence[i]); // [hello, are, today]
         }
         
     }
     return result;
 };
-
+//                            0    1   2   3    4     5
 console.log(everyOtherWord('hello how are you today sir?'));
 
 
@@ -125,6 +127,7 @@ function wordYeller(sentence) {
 
         // add conditionals to detect punctuation
         // is there a DRYer way to write this?
+        // YES, put statements in array
         if (lastCharacterOfWord.includes('.') || 
         lastCharacterOfWord.includes(',') ||
         lastCharacterOfWord.includes('!') ||
@@ -150,6 +153,36 @@ function wordYeller(sentence) {
 };
 
 console.log(wordYeller('the quick brown fox'));
+
+
+
+// // lizz variation
+// function wordYeller(sentence) {
+//     let words = sentence.split(' ');
+
+//     for (let i = 0; i < words.length; i++) {
+        
+//         if (punctuationCheck(words[i])) {
+//             words[i] += '!';
+//         }
+//     }
+//     return sentence = words.join(' ');
+// }
+
+// lizz's punctuation check function! herein lies the key
+// to tic tac toe victory logic
+// must loop through nested array of victory conditions
+function punctuationCheck(word) {
+    const punctuation = ['!', '?', ':', ';', '.', ','];
+    for (let i = 0; i < punctuation.length; i++) {
+        if (word[word.length-1] === punctuation[m]) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+};
+
 
 
 // arraySubstring
